@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="探索2024年最火爆的AI创业案例，深度分析ChatGPT、Midjourney、Jasper等20+成功AI创业公司的商业模式、技术实现与盈利策略。">
+    <meta name="keywords" content="AI创业,人工智能创业,AI startup,ChatGPT,Midjourney,AI商业模式,创业案例分析">
+    <meta name="author" content="AI Startup Cases">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai-startup-cases.vercel.app/">
+    <meta property="og:title" content="最火AI创业案例 | 深度解析20+成功AI公司">
+    <meta property="og:description" content="探索2024年最火爆的AI创业案例，深度分析ChatGPT、Midjourney、Jasper等成功AI创业公司的商业模式与盈利策略。">
+    <meta property="og:image" content="https://ai-startup-cases.vercel.app/og-image.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ai-startup-cases.vercel.app/">
+    <meta name="twitter:title" content="最火AI创业案例 | 深度解析20+成功AI公司">
+    <meta name="twitter:description" content="探索2024年最火爆的AI创业案例，深度分析成功AI创业公司的商业模式与盈利策略。">
+    <meta name="twitter:image" content="https://ai-startup-cases.vercel.app/og-image.png">
+    
+    <title>最火AI创业案例 | 深度解析20+成功AI公司的商业模式</title>
+    
+    <link rel="canonical" href="https://ai-startup-cases.vercel.app/">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "最火AI创业案例",
+        "description": "探索2024年最火爆的AI创业案例，深度分析成功AI创业公司的商业模式与盈利策略",
+        "url": "https://ai-startup-cases.vercel.app/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ai-startup-cases.vercel.app/?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ChatGPT - OpenAI", "url": "https://ai-startup-cases.vercel.app/cases/chatgpt.html"},
+            {"@type": "ListItem", "position": 2, "name": "Midjourney", "url": "https://ai-startup-cases.vercel.app/cases/midjourney.html"},
+            {"@type": "ListItem", "position": 3, "name": "Jasper AI", "url": "https://ai-startup-cases.vercel.app/cases/jasper.html"},
+            {"@type": "ListItem", "position": 4, "name": "Copy.ai", "url": "https://ai-startup-cases.vercel.app/cases/copyai.html"},
+            {"@type": "ListItem", "position": 5, "name": "Runway ML", "url": "https://ai-startup-cases.vercel.app/cases/runway.html"}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">AI<span>创业案例</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">首页</a></li>
+                <li><a href="#categories">分类</a></li>
+                <li><a href="#cases">热门案例</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探索最火的 AI 创业案例</h1>
+            <p>深度解析 20+ 成功 AI 公司的商业模式、技术实现与盈利策略，助你把握人工智能时代的创业机遇</p>
+            
+            <!-- Search Box -->
+            <div class="search-container" style="position: relative;">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索 AI 创业案例..." aria-label="搜索案例" onkeyup="handleSearch(event)">
+                    <button onclick="performSearch()">搜索</button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats-section">
+        <div class="stat-item">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">深度案例分析</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">$100B+</div>
+            <div class="stat-label">累计估值</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">6</div>
+            <div class="stat-label">AI 细分领域</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">2024</div>
+            <div class="stat-label">最新案例更新</div>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="cases-section" id="categories">
+        <div class="section-title">
+            <h2>按分类浏览</h2>
+        </div>
+        <div class="category-filter">
+            <button class="category-btn active" onclick="filterCases('all')">全部</button>
+            <button class="category-btn" onclick="filterCases('llm')">大语言模型</button>
+            <button class="category-btn" onclick="filterCases('image')">AI 图像生成</button>
+            <button class="category-btn" onclick="filterCases('writing')">AI 写作</button>
+            <button class="category-btn" onclick="filterCases('video')">AI 视频</button>
+            <button class="category-btn" onclick="filterCases('dev')">AI 开发工具</button>
+            <button class="category-btn" onclick="filterCases('other')">其他 AI</button>
+        </div>
+    </section>
+
+    <!-- Cases Grid -->
+    <section class="cases-section" id="cases">
+        <div class="section-title">
+            <h2>热门 AI 创业案例</h2>
+        </div>
+        <div class="cases-grid" id="casesGrid">
+            <!-- Case 1: ChatGPT -->
+            <article class="case-card" data-category="llm" data-name="ChatGPT OpenAI 对话AI 大语言模型">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #10a37f 0%, #1a7f64 100%);">
+                    🤖
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">大语言模型</span>
+                    <h3>ChatGPT - OpenAI</h3>
+                    <p>史上增长最快的消费级应用，两个月用户破亿。深度解析 OpenAI 如何打造改变世界的对话式 AI。</p>
+                    <a href="cases/chatgpt.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 2: Midjourney -->
+            <article class="case-card" data-category="image" data-name="Midjourney AI绘画 图像生成">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #5865F2 0%, #7289DA 100%);">
+                    🎨
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">AI 图像生成</span>
+                    <h3>Midjourney</h3>
+                    <p>仅 11 人团队创造年收入 2 亿美金神话。解密 Midjourney 的极简商业模式与社区驱动增长策略。</p>
+                    <a href="cases/midjourney.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 3: Jasper AI -->
+            <article class="case-card" data-category="writing" data-name="Jasper AI 营销文案 内容生成">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);">
+                    ✍️
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">AI 写作</span>
+                    <h3>Jasper AI</h3>
+                    <p>估值 15 亿美元的 AI 营销写作独角兽。探索 Jasper 如何用 AI 革新内容营销行业。</p>
+                    <a href="cases/jasper.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 4: Copy.ai -->
+            <article class="case-card" data-category="writing" data-name="Copy.ai 文案写作 营销">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%);">
+                    📝
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">AI 写作</span>
+                    <h3>Copy.ai</h3>
+                    <p>从 AI 文案工具到企业级工作流平台的转型之路。分析 Copy.ai 的产品演进与市场策略。</p>
+                    <a href="cases/copyai.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 5: Runway ML -->
+            <article class="case-card" data-category="video" data-name="Runway ML AI视频 视频生成 Gen-2">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #EC4899 0%, #F472B6 100%);">
+                    🎬
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">AI 视频</span>
+                    <h3>Runway ML</h3>
+                    <p>估值 15 亿美元的 AI 视频创作平台。揭秘 Runway 如何引领文生视频技术革命。</p>
+                    <a href="cases/runway.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 6: Stability AI -->
+            <article class="case-card" data-category="image" data-name="Stability AI Stable Diffusion 开源 图像生成">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);">
+                    🖼️
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">AI 图像生成</span>
+                    <h3>Stability AI</h3>
+                    <p>开源 AI 模型的商业化探索者。分析 Stable Diffusion 背后公司的开源策略与挑战。</p>
+                    <a href="cases/stability-ai.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 7: Character.ai -->
+            <article class="case-card" data-category="llm" data-name="Character.ai 聊天机器人 角色扮演 虚拟角色">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #06B6D4 0%, #22D3EE 100%);">
+                    💬
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">大语言模型</span>
+                    <h3>Character.ai</h3>
+                    <p>估值 10 亿美元的 AI 角色聊天平台。探索 Character.ai 如何打造沉浸式 AI 社交体验。</p>
+                    <a href="cases/character-ai.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 8: Anthropic Claude -->
+            <article class="case-card" data-category="llm" data-name="Anthropic Claude AI安全 对话AI">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #D97706 0%, #F59E0B 100%);">
+                    🧠
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">大语言模型</span>
+                    <h3>Anthropic Claude</h3>
+                    <p>估值 150 亿美元的 AI 安全领跑者。解析 Anthropic 如何以安全为核心差异化竞争。</p>
+                    <a href="cases/anthropic-claude.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 9: Hugging Face -->
+            <article class="case-card" data-category="dev" data-name="Hugging Face 机器学习 模型托管 开源社区">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #FFD21E 0%, #FFC800 100%);">
+                    🤗
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">AI 开发工具</span>
+                    <h3>Hugging Face</h3>
+                    <p>估值 45 亿美元的 AI 界 GitHub。分析 Hugging Face 如何构建 AI 开发者生态系统。</p>
+                    <a href="cases/hugging-face.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 10: Cohere -->
+            <article class="case-card" data-category="llm" data-name="Cohere 企业AI NLP 自然语言处理">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%);">
+                    🏢
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">大语言模型</span>
+                    <h3>Cohere</h3>
+                    <p>专注企业级 NLP 的 AI 独角兽。探索 Cohere 的 B2B 差异化战略与技术优势。</p>
+                    <a href="cases/cohere.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 11: Notion AI -->
+            <article class="case-card" data-category="writing" data-name="Notion AI 笔记 协作 生产力">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #000000 0%, #333333 100%);">
+                    📔
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">AI 写作</span>
+                    <h3>Notion AI</h3>
+                    <p>估值 100 亿美元的生产力工具如何整合 AI。分析 Notion AI 的产品策略与用户增长。</p>
+                    <a href="cases/notion-ai.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 12: GitHub Copilot -->
+            <article class="case-card" data-category="dev" data-name="GitHub Copilot 代码补全 编程助手 微软">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #238636 0%, #2EA043 100%);">
+                    👨‍💻
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">AI 开发工具</span>
+                    <h3>GitHub Copilot</h3>
+                    <p>改变程序员工作方式的 AI 编程助手。解析 Copilot 的技术架构与商业模式。</p>
+                    <a href="cases/github-copilot.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 13: Grammarly -->
+            <article class="case-card" data-category="writing" data-name="Grammarly 语法检查 写作助手">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #15C39A 0%, #20E3B2 100%);">
+                    ✅
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">AI 写作</span>
+                    <h3>Grammarly</h3>
+                    <p>估值 130 亿美元的 AI 写作助手先驱。分析 Grammarly 15 年的产品演进与 AI 转型。</p>
+                    <a href="cases/grammarly.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 14: Synthesia -->
+            <article class="case-card" data-category="video" data-name="Synthesia AI视频 数字人 虚拟主播">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);">
+                    🎭
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">AI 视频</span>
+                    <h3>Synthesia</h3>
+                    <p>估值 10 亿美元的 AI 数字人视频平台。探索 Synthesia 如何革新企业视频制作。</p>
+                    <a href="cases/synthesia.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 15: Lensa AI -->
+            <article class="case-card" data-category="image" data-name="Lensa AI 照片编辑 AI头像 魔法头像">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #E11D48 0%, #F43F5E 100%);">
+                    📸
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">AI 图像生成</span>
+                    <h3>Lensa AI</h3>
+                    <p>病毒式传播的 AI 头像应用。分析 Lensa 的爆款产品策略与移动端 AI 商业化。</p>
+                    <a href="cases/lensa-ai.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 16: Perplexity AI -->
+            <article class="case-card" data-category="llm" data-name="Perplexity AI 搜索引擎 问答 知识检索">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);">
+                    🔍
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">大语言模型</span>
+                    <h3>Perplexity AI</h3>
+                    <p>估值 30 亿美元的 AI 搜索引擎。解析 Perplexity 如何挑战 Google 搜索霸权。</p>
+                    <a href="cases/perplexity.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 17: Replika -->
+            <article class="case-card" data-category="other" data-name="Replika AI陪伴 聊天机器人 情感AI">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #7E22CE 0%, #A855F7 100%);">
+                    💝
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">其他 AI</span>
+                    <h3>Replika</h3>
+                    <p>估值超 1 亿美元的 AI 情感陪伴应用。探索 Replika 的情感 AI 产品与伦理边界。</p>
+                    <a href="cases/replika.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 18: Scale AI -->
+            <article class="case-card" data-category="dev" data-name="Scale AI 数据标注 机器学习 训练数据">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #6366F1 0%, #818CF8 100%);">
+                    📊
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">AI 开发工具</span>
+                    <h3>Scale AI</h3>
+                    <p>估值 73 亿美元的 AI 数据基础设施公司。分析 Scale AI 如何成为 AI 训练数据王者。</p>
+                    <a href="cases/scale-ai.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 19: DeepL -->
+            <article class="case-card" data-category="other" data-name="DeepL 翻译 机器翻译 多语言">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%);">
+                    🌐
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">其他 AI</span>
+                    <h3>DeepL</h3>
+                    <p>估值超 20 亿美元的 AI 翻译巨头。解析 DeepL 如何用技术优势击败 Google 翻译。</p>
+                    <a href="cases/deepl.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+
+            <!-- Case 20: ElevenLabs -->
+            <article class="case-card" data-category="other" data-name="ElevenLabs AI语音 语音合成 文字转语音">
+                <div class="case-card-image" style="background: linear-gradient(135deg, #0EA5E9 0%, #38BDF8 100%);">
+                    🎙️
+                </div>
+                <div class="case-card-content">
+                    <span class="case-card-category">其他 AI</span>
+                    <h3>ElevenLabs</h3>
+                    <p>估值 11 亿美元的 AI 语音合成独角兽。探索 ElevenLabs 的语音克隆技术与商业潜力。</p>
+                    <a href="cases/elevenlabs.html" class="case-card-link">阅读详情 →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="cases-section" id="about">
+        <div class="section-title">
+            <h2>关于本站</h2>
+        </div>
+        <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+            <p>AI 创业案例是一个专注于人工智能创业领域的深度分析平台。我们致力于为创业者、投资人和 AI 爱好者提供最全面、最深入的 AI 创业案例研究。</p>
+            <p>每个案例都包含详细的商业模式分析、技术实现解读、用户需求洞察、盈利策略剖析等内容，帮助你全面了解 AI 创业的成功要素与潜在风险。</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h4>AI创业案例</h4>
+                <p>深度解析最火 AI 创业公司的商业模式与成功密码。</p>
+            </div>
+            <div>
+                <h4>分类导航</h4>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="filterCases('llm')">大语言模型</a></li>
+                    <li><a href="#" onclick="filterCases('image')">AI 图像生成</a></li>
+                    <li><a href="#" onclick="filterCases('writing')">AI 写作工具</a></li>
+                    <li><a href="#" onclick="filterCases('video')">AI 视频制作</a></li>
+                    <li><a href="#" onclick="filterCases('dev')">AI 开发工具</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>热门案例</h4>
+                <ul class="footer-links">
+                    <li><a href="cases/chatgpt.html">ChatGPT</a></li>
+                    <li><a href="cases/midjourney.html">Midjourney</a></li>
+                    <li><a href="cases/anthropic-claude.html">Anthropic Claude</a></li>
+                    <li><a href="cases/perplexity.html">Perplexity AI</a></li>
+                    <li><a href="cases/github-copilot.html">GitHub Copilot</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AI创业案例. 保留所有权利. | 专注AI创业研究与分析</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="回到顶部">↑</button>
+
+    <script>
+        // Case data for search
+        const casesData = [
+            { name: 'ChatGPT - OpenAI', category: 'llm', url: 'cases/chatgpt.html', desc: '史上增长最快的消费级应用，两个月用户破亿', keywords: 'chatgpt openai 对话ai 大语言模型 gpt' },
+            { name: 'Midjourney', category: 'image', url: 'cases/midjourney.html', desc: '仅 11 人团队创造年收入 2 亿美金神话', keywords: 'midjourney ai绘画 图像生成 艺术' },
+            { name: 'Jasper AI', category: 'writing', url: 'cases/jasper.html', desc: '估值 15 亿美元的 AI 营销写作独角兽', keywords: 'jasper ai写作 营销文案 内容生成' },
+            { name: 'Copy.ai', category: 'writing', url: 'cases/copyai.html', desc: '从 AI 文案工具到企业级工作流平台', keywords: 'copyai 文案写作 营销 工作流' },
+            { name: 'Runway ML', category: 'video', url: 'cases/runway.html', desc: '估值 15 亿美元的 AI 视频创作平台', keywords: 'runway ai视频 视频生成 gen-2' },
+            { name: 'Stability AI', category: 'image', url: 'cases/stability-ai.html', desc: '开源 AI 模型的商业化探索者', keywords: 'stability stable diffusion 开源 图像' },
+            { name: 'Character.ai', category: 'llm', url: 'cases/character-ai.html', desc: '估值 10 亿美元的 AI 角色聊天平台', keywords: 'character 聊天机器人 角色扮演 虚拟' },
+            { name: 'Anthropic Claude', category: 'llm', url: 'cases/anthropic-claude.html', desc: '估值 150 亿美元的 AI 安全领跑者', keywords: 'anthropic claude ai安全 对话ai' },
+            { name: 'Hugging Face', category: 'dev', url: 'cases/hugging-face.html', desc: '估值 45 亿美元的 AI 界 GitHub', keywords: 'huggingface 机器学习 模型托管 开源' },
+            { name: 'Cohere', category: 'llm', url: 'cases/cohere.html', desc: '专注企业级 NLP 的 AI 独角兽', keywords: 'cohere 企业ai nlp 自然语言' },
+            { name: 'Notion AI', category: 'writing', url: 'cases/notion-ai.html', desc: '估值 100 亿美元生产力工具的 AI 整合', keywords: 'notion 笔记 协作 生产力' },
+            { name: 'GitHub Copilot', category: 'dev', url: 'cases/github-copilot.html', desc: '改变程序员工作方式的 AI 编程助手', keywords: 'copilot github 代码补全 编程助手' },
+            { name: 'Grammarly', category: 'writing', url: 'cases/grammarly.html', desc: '估值 130 亿美元的 AI 写作助手先驱', keywords: 'grammarly 语法检查 写作助手' },
+            { name: 'Synthesia', category: 'video', url: 'cases/synthesia.html', desc: '估值 10 亿美元的 AI 数字人视频平台', keywords: 'synthesia ai视频 数字人 虚拟主播' },
+            { name: 'Lensa AI', category: 'image', url: 'cases/lensa-ai.html', desc: '病毒式传播的 AI 头像应用', keywords: 'lensa 照片编辑 ai头像 魔法头像' },
+            { name: 'Perplexity AI', category: 'llm', url: 'cases/perplexity.html', desc: '估值 30 亿美元的 AI 搜索引擎', keywords: 'perplexity 搜索引擎 问答 知识检索' },
+            { name: 'Replika', category: 'other', url: 'cases/replika.html', desc: '估值超 1 亿美元的 AI 情感陪伴应用', keywords: 'replika ai陪伴 聊天机器人 情感ai' },
+            { name: 'Scale AI', category: 'dev', url: 'cases/scale-ai.html', desc: '估值 73 亿美元的 AI 数据基础设施公司', keywords: 'scale 数据标注 机器学习 训练数据' },
+            { name: 'DeepL', category: 'other', url: 'cases/deepl.html', desc: '估值超 20 亿美元的 AI 翻译巨头', keywords: 'deepl 翻译 机器翻译 多语言' },
+            { name: 'ElevenLabs', category: 'other', url: 'cases/elevenlabs.html', desc: '估值 11 亿美元的 AI 语音合成独角兽', keywords: 'elevenlabs ai语音 语音合成 文字转语音' }
+        ];
+
+        // Mobile navigation toggle
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Search functionality
+        function handleSearch(event) {
+            const query = event.target.value.toLowerCase().trim();
+            const resultsContainer = document.getElementById('searchResults');
+            
+            if (query.length < 2) {
+                resultsContainer.classList.remove('active');
+                return;
+            }
+
+            const results = casesData.filter(item => 
+                item.name.toLowerCase().includes(query) || 
+                item.desc.toLowerCase().includes(query) ||
+                item.keywords.toLowerCase().includes(query)
+            );
+
+            if (results.length > 0) {
+                resultsContainer.innerHTML = results.map(item => `
+                    <a href="${item.url}" class="search-result-item">
+                        <h4>${item.name}</h4>
+                        <p>${item.desc}</p>
+                    </a>
+                `).join('');
+                resultsContainer.classList.add('active');
+            } else {
+                resultsContainer.innerHTML = '<div class="no-results">未找到相关案例</div>';
+                resultsContainer.classList.add('active');
+            }
+
+            if (event.key === 'Enter' && results.length > 0) {
+                window.location.href = results[0].url;
+            }
+        }
+
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            if (query.length < 2) return;
+            
+            const results = casesData.filter(item => 
+                item.name.toLowerCase().includes(query) || 
+                item.desc.toLowerCase().includes(query) ||
+                item.keywords.toLowerCase().includes(query)
+            );
+            
+            if (results.length > 0) {
+                window.location.href = results[0].url;
+            }
+        }
+
+        // Close search results when clicking outside
+        document.addEventListener('click', function(e) {
+            const searchContainer = document.querySelector('.search-container');
+            if (!searchContainer.contains(e.target)) {
+                document.getElementById('searchResults').classList.remove('active');
+            }
+        });
+
+        // Category filter
+        function filterCases(category) {
+            const cards = document.querySelectorAll('.case-card');
+            const buttons = document.querySelectorAll('.category-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach((card, index) => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'block';
+                    card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.05}s both`;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Scroll to cases section
+            document.getElementById('cases').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.getElementById('scrollTop');
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+
+        // Animate cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.case-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
+
