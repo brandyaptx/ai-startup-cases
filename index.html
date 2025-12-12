@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="探索2024年最火爆的AI创业案例，深度分析ChatGPT、Midjourney、Jasper等20+成功AI创业公司的商业模式、技术实现与盈利策略。">
-    <meta name="keywords" content="AI创业,人工智能创业,AI startup,ChatGPT,Midjourney,AI商业模式,创业案例分析">
+    <meta name="description" content="探索2025年最火爆的AI创业案例，深度分析ChatGPT、Midjourney、Jasper等20+成功AI创业公司的商业模式、技术实现与盈利策略。">
+    <meta name="keywords" content="AI创业,人工智能创业,AI startup,ChatGPT,Midjourney,AI商业模式,创业案例分析,2025">
     <meta name="author" content="AI Startup Cases">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ai-startup-cases.vercel.app/">
-    <meta property="og:title" content="最火AI创业案例 | 深度解析20+成功AI公司">
-    <meta property="og:description" content="探索2024年最火爆的AI创业案例，深度分析ChatGPT、Midjourney、Jasper等成功AI创业公司的商业模式与盈利策略。">
+    <meta property="og:title" content="最火AI创业案例(2025) | 深度解析20+成功AI公司的商业模式">
+    <meta property="og:description" content="探索2025年最火爆的AI创业案例，深度分析ChatGPT、Midjourney、Jasper等20+成功AI创业公司的商业模式、技术实现与盈利策略。">
     <meta property="og:image" content="https://ai-startup-cases.vercel.app/og-image.png">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://ai-startup-cases.vercel.app/">
-    <meta name="twitter:title" content="最火AI创业案例 | 深度解析20+成功AI公司">
-    <meta name="twitter:description" content="探索2024年最火爆的AI创业案例，深度分析成功AI创业公司的商业模式与盈利策略。">
+    <meta name="twitter:title" content="最火AI创业案例(2025) | 深度解析20+成功AI公司的商业模式">
+    <meta name="twitter:description" content="探索2025年最火爆的AI创业案例，深度分析ChatGPT、Midjourney、Jasper等20+成功AI创业公司的商业模式、技术实现与盈利策略。">
     <meta name="twitter:image" content="https://ai-startup-cases.vercel.app/og-image.png">
     
-    <title>最火AI创业案例 | 深度解析20+成功AI公司的商业模式</title>
+    <title>最火AI创业案例(2025) | 深度解析20+成功AI公司的商业模式</title>
     
     <link rel="canonical" href="https://ai-startup-cases.vercel.app/">
     <link rel="stylesheet" href="styles.css">
@@ -56,6 +56,18 @@
         ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "?????? Adsense?", "acceptedAnswer": {"@type": "Answer", "text": "??????????????????????????????"}},
+            {"@type": "Question", "name": "?????????", "acceptedAnswer": {"@type": "Answer", "text": "????????????????????? eCPM ???"}},
+            {"@type": "Question", "name": "????????", "acceptedAnswer": {"@type": "Answer", "text": "????? hi@ai-startup-cases.com??????????????"}},
+            {"@type": "Question", "name": "???? Cookies ????", "acceptedAnswer": {"@type": "Answer", "text": "???????????????????????????????"}}
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -68,10 +80,14 @@
                 <span></span>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="/">首页</a></li>
-                <li><a href="#categories">分类</a></li>
-                <li><a href="#cases">热门案例</a></li>
-                <li><a href="#about">关于</a></li>
+                <li><a href="/">??</a></li>
+                <li><a href="/#categories">??</a></li>
+                <li><a href="/#cases">????</a></li>
+                <li><a href="/#about">??</a></li>
+                <li><a href="/about.html">????</a></li>
+                <li><a href="/privacy.html">????</a></li>
+                <li><a href="/terms.html">????</a></li>
+                <li><a href="/contact.html">????</a></li>
             </ul>
         </div>
     </nav>
@@ -108,7 +124,7 @@
             <div class="stat-label">AI 细分领域</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">2024</div>
+            <div class="stat-number">2025</div>
             <div class="stat-label">最新案例更新</div>
         </div>
     </section>
@@ -119,13 +135,13 @@
             <h2>按分类浏览</h2>
         </div>
         <div class="category-filter">
-            <button class="category-btn active" onclick="filterCases('all')">全部</button>
-            <button class="category-btn" onclick="filterCases('llm')">大语言模型</button>
-            <button class="category-btn" onclick="filterCases('image')">AI 图像生成</button>
-            <button class="category-btn" onclick="filterCases('writing')">AI 写作</button>
-            <button class="category-btn" onclick="filterCases('video')">AI 视频</button>
-            <button class="category-btn" onclick="filterCases('dev')">AI 开发工具</button>
-            <button class="category-btn" onclick="filterCases('other')">其他 AI</button>
+            <button class="category-btn active" onclick="filterCases(event, \'all\')">全部</button>
+            <button class="category-btn" onclick="filterCases(event, \'llm\')">大语言模型</button>
+            <button class="category-btn" onclick="filterCases(event, \'image\')">AI 图像生成</button>
+            <button class="category-btn" onclick="filterCases(event, \'writing\')">AI 写作</button>
+            <button class="category-btn" onclick="filterCases(event, \'video\')">AI 视频</button>
+            <button class="category-btn" onclick="filterCases(event, \'dev\')">AI 开发工具</button>
+            <button class="category-btn" onclick="filterCases(event, \'other\')">其他 AI</button>
         </div>
     </section>
 
@@ -409,35 +425,85 @@
     </section>
 
     <!-- Footer -->
+        <section class="faq-section" id="faq">
+        <div class="section-title">
+            <h2>?????SEO ????</h2>
+        </div>
+        <div class="faq-item">
+            <h3>?????? Adsense?</h3>
+            <p>??????????????????????????????????????? > ???</p>
+        </div>
+        <div class="faq-item">
+            <h3>?????????</h3>
+            <p>???????????????????????? eCPM ???US/UK/CA/AU??</p>
+        </div>
+        <div class="faq-item">
+            <h3>????????</h3>
+            <p>?????? <a href="mailto:hi@ai-startup-cases.com">hi@ai-startup-cases.com</a>?????????????</p>
+        </div>
+        <div class="faq-item">
+            <h3>???? Cookies ????</h3>
+            <p>?????????????????????????? Cookie ?????????????</p>
+        </div>
+    </section>
+
+    <section class="cases-section" id="trust">
+        <div class="section-title">
+            <h2>?????</h2>
+        </div>
+        <div class="two-column">
+            <div class="card">
+                <h3>????? robots</h3>
+                <p>??? <a href="/sitemap.xml">sitemap.xml</a> ? <a href="/robots.txt">robots.txt</a>??????????</p>
+                <p class="ad-note">????????????????????</p>
+            </div>
+            <div class="card">
+                <h3>?????</h3>
+                <p>??? <a href="/privacy.html">????</a> ? <a href="/terms.html">????</a>?????????????</p>
+                <p>????????????? <a href="/contact.html">???</a> ???</p>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <div class="footer-content">
             <div>
-                <h4>AI创业案例</h4>
-                <p>深度解析最火 AI 创业公司的商业模式与成功密码。</p>
+                <h4>AI????</h4>
+                <p>?????? AI ??????????????????????????????????</p>
+                <p>???<a href="mailto:hi@ai-startup-cases.com">hi@ai-startup-cases.com</a></p>
             </div>
             <div>
-                <h4>分类导航</h4>
+                <h4>????</h4>
                 <ul class="footer-links">
-                    <li><a href="#" onclick="filterCases('llm')">大语言模型</a></li>
-                    <li><a href="#" onclick="filterCases('image')">AI 图像生成</a></li>
-                    <li><a href="#" onclick="filterCases('writing')">AI 写作工具</a></li>
-                    <li><a href="#" onclick="filterCases('video')">AI 视频制作</a></li>
-                    <li><a href="#" onclick="filterCases('dev')">AI 开发工具</a></li>
+                    <li><a href="/#categories">????</a></li>
+                    <li><a href="/#categories">?????</a></li>
+                    <li><a href="/#categories">AI ????</a></li>
+                    <li><a href="/#categories">AI ?? / ??</a></li>
+                    <li><a href="/#categories">AI ????</a></li>
                 </ul>
             </div>
             <div>
-                <h4>热门案例</h4>
+                <h4>????</h4>
                 <ul class="footer-links">
-                    <li><a href="cases/chatgpt.html">ChatGPT</a></li>
-                    <li><a href="cases/midjourney.html">Midjourney</a></li>
-                    <li><a href="cases/anthropic-claude.html">Anthropic Claude</a></li>
-                    <li><a href="cases/perplexity.html">Perplexity AI</a></li>
-                    <li><a href="cases/github-copilot.html">GitHub Copilot</a></li>
+                    <li><a href="/cases/chatgpt.html">ChatGPT</a></li>
+                    <li><a href="/cases/midjourney.html">Midjourney</a></li>
+                    <li><a href="/cases/anthropic-claude.html">Anthropic Claude</a></li>
+                    <li><a href="/cases/perplexity.html">Perplexity AI</a></li>
+                    <li><a href="/cases/github-copilot.html">GitHub Copilot</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>?????</h4>
+                <ul class="footer-links">
+                    <li><a href="/about.html">????</a></li>
+                    <li><a href="/privacy.html">????</a></li>
+                    <li><a href="/terms.html">????</a></li>
+                    <li><a href="/contact.html">????</a></li>
+                    <li><a href="/sitemap.xml">????</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 AI创业案例. 保留所有权利. | 专注AI创业研究与分析</p>
+            <p>&copy; 2024-2025 AI????. ??????. | ??AI???????</p>
         </div>
     </footer>
 
@@ -532,12 +598,12 @@
         });
 
         // Category filter
-        function filterCases(category) {
+        function filterCases(evt, category) {
             const cards = document.querySelectorAll('.case-card');
             const buttons = document.querySelectorAll('.category-btn');
             
             buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            if (evt && evt.target) { evt.target.classList.add('active'); }
 
             cards.forEach((card, index) => {
                 const cardCategory = card.getAttribute('data-category');
@@ -587,6 +653,7 @@
             observer.observe(card);
         });
     </script>
+    <script src="/site.js"></script>
 </body>
 </html>
 

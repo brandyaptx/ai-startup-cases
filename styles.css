@@ -1,7 +1,7 @@
-/* AI Startup Cases - Custom Styles */
-/* 配合 Tailwind CDN 使用 */
+﻿/* AI Startup Cases - Custom Styles */
+/* 閰嶅悎 Tailwind CDN 浣跨敤 */
 
-/* 自定义字体 */
+/* 鑷畾涔夊瓧浣?*/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -713,7 +713,7 @@ a:hover {
 }
 
 .toc a::before {
-  content: '→';
+  content: '鈫?;
   color: var(--color-accent);
 }
 
@@ -782,6 +782,217 @@ a:hover {
   margin-top: 0.5rem;
 }
 
+/* Common content pages */
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin-bottom: 0.75rem;
+}
+
+.page-lede {
+  color: var(--color-text-light);
+  font-size: 1.05rem;
+  max-width: 720px;
+  margin: 0.5rem auto 1.5rem;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--color-bg-alt);
+  color: var(--color-accent);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin-bottom: 0.75rem;
+}
+
+.list-clean {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-clean li {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-light);
+}
+
+/* Ad placeholders */
+.ad-slot {
+  border: 2px dashed var(--color-border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(233, 69, 96, 0.05), rgba(22, 33, 62, 0.04));
+  color: var(--color-text);
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.ad-slot strong {
+  color: var(--color-accent);
+}
+
+.ad-slot-horizontal {
+  min-height: 120px;
+}
+
+.ad-slot-rectangle {
+  min-height: 250px;
+}
+
+.ad-slot-sticky {
+  position: sticky;
+  top: 90px;
+}
+
+.ad-note {
+  display: block;
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+/* FAQ + policy blocks */
+.faq-section {
+  background: var(--color-bg-alt);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 3rem auto;
+  border: 1px solid var(--color-border);
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+.faq-item h3 {
+  margin-bottom: 0.35rem;
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.policy-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.policy-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.contact-methods {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-methods li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--color-text);
+}
+
+.contact-methods span {
+  color: var(--color-text-light);
+}
+
+/* Cookie banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  max-width: 520px;
+  width: calc(100% - 2rem);
+  z-index: 120;
+}
+
+.cookie-banner p {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cookie-actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cookie-accept {
+  background: var(--color-accent);
+  color: white;
+}
+
+.cookie-later {
+  background: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
 /* Print Styles */
 @media print {
   .nav, .footer, .scroll-top, .search-container {
@@ -798,4 +1009,3 @@ a:hover {
     line-height: 1.5;
   }
 }
-
