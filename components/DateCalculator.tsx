@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { digitSum, getReading, lifePathNumber, personalYearNumber } from '@/lib/numerology';
+import { digitSum, getReading, lifePathNumber, nameNumber, personalYearNumber } from '@/lib/numerology';
 import { ResultCard } from '@/components/ResultCard';
 
 export function SimpleDateCalculator({ type }: { type: 'life' | 'wedding' | 'personalYear' | 'address' | 'word' }) {
@@ -30,7 +30,7 @@ export function SimpleDateCalculator({ type }: { type: 'life' | 'wedding' | 'per
     label = 'Address number';
   }
   if (type === 'word') {
-    number = digitSum(text.split('').map((ch) => ch.charCodeAt(0)).join(''));
+    number = nameNumber(text, 'all');
     label = 'Word number';
   }
 
